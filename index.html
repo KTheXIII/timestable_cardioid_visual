@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/main.css" />
+
+        <title>timestable_cardioid_visualization</title>
+
+        <script src="libraries/p5.js"></script>
+        <script src="libraries/p5.dom.js"></script>
+        <script src="libraries/p5.sound.js"></script>
+        <script src="javascript/sketch.js"></script>
+    </head>
+    <body>
+        <div class="settingsContainer topright noBottomPadding noselect">
+            <div class="settingBtn noselect "><p>&#9776;</p></div>
+            <div class="columnContainer noBorder noselect ">
+                <p id="title">SETTINGS</p>
+            </div>
+            <div class="columnContainer noselect ">
+                <div class="inlineInput">
+                    <label for="totalNum">total:</label>
+                    <input
+                        type="text"
+                        name="totalNum"
+                        id="totalNum"
+                        value="200"
+                    />
+                    <input
+                        type="range"
+                        min="0"
+                        max="200"
+                        value="200"
+                        class="slider"
+                        id="totalSliderValue"
+                    />
+                </div>
+            </div>
+            <div class="columnContainer noselect">
+                <div class="inlineInput">
+                    <label for="factorNum">factor:</label>
+                    <input
+                        type="text"
+                        name="factorNum"
+                        id="factorNum"
+                        value="0"
+                    />
+                </div>
+            </div>
+            <div class="columnContainer">
+                <div class="sectionPadding">
+                    <div class="animateContainer">
+                        <label for="animateValueToF" class="noselect"
+                            >ANIMATE:</label
+                        >
+                        <input
+                            type="checkbox"
+                            class="custom-checkbox"
+                            id="animateValueToF"
+                            name="animateValueToF"
+                            checked
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="columnContainer">
+                <div class="sectionPadding">
+                    <div class="limitSection">
+                        <p>Limits</p>
+                        <div>
+                            <!-- <p>0</p> -->
+                            <input
+                                class="limitValue"
+                                type="text"
+                                name="xoneLimit"
+                                id="xoneLimit"
+                                value="0"
+                            />
+                            <p><</p>
+                            <p id="currentFactorNum">x=0</p>
+                            <p><</p>
+                            <input
+                                class="limitValue"
+                                type="text"
+                                name="xtwoLimit"
+                                id="xtwoLimit"
+                                value="15"
+                            />
+                            <input
+                                type="range"
+                                min="0"
+                                max="1000"
+                                value="1"
+                                class="slider"
+                                id="factorSliderValue"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="columnContainer">
+                <div class="sectionPadding">
+                    <div class="sliderContainer">
+                        <p>Angle Offset</p>
+                        <p id="factorValueDisplay">180 degrees</p>
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="1"
+                            class="slider"
+                            id="angleSliderValue"
+                        />
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </body>
+</html>
