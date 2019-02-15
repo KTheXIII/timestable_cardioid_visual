@@ -46,7 +46,11 @@ function drawTimesTable() {
 
     for (let i = 0; i < total; i++) {
         let v = getVector(i, total)
-        fill(255)
+        // let hue = map(factor, 0, x2, 0, 1)
+        let hue = map(i, 0, total, 0, 0.1)
+        let colorArr = hslToRgb(0.503, 1, 0.5)
+        fill(colorArr[0], colorArr[1], colorArr[2])
+        stroke(colorArr[0], colorArr[1], colorArr[2])
         ellipse(v.x, v.y, dotRadius * 2)
 
         let a = getVector(i, total)
